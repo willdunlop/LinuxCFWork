@@ -1,0 +1,4 @@
+Tom = Bank.new("Tom", "1", 1, "1", "1", 1)
+Will = Bank.new("Will", "not@fake.com", 80085, "23 Road st", "0475847736", 1337)
+Rob = Bank.new("Rob", "Rob@anywhere.com", 12345, "20 water rd", "04783847", 2121)
+Bob = Bank.new("Bob", "bob@bob.com", 2, "123 Whatever", "049585", 1234)

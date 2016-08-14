@@ -1,0 +1,9 @@
+------------------------------
+-= THE PROUD BANK OF WILLBANK =-
+
+Your current balance is:
+
+	 $20
+
+Thank you for using WillBank
+------------------------------
