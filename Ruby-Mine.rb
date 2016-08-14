@@ -14,13 +14,11 @@ class RubyMiner
   attr_accessor :efunc
 
   def main          #Main menu
-    @header =  "\e[1;41;37m          RUBY MINER v1.0          \e[1;0;0m"
-    system "clear"
-    puts @header
+    efunc.header
     efunc.tcheck
     puts"\n\e[33m[1]\e[31m\tExercises\n\e[33m[2]\e[31m\tCreate File\n\e[33m[3]\e[31m\tKoans"
     puts "\e[33m[4]\e[31m\tAbout\n\e[33m[5]\e[31m\tExit\e[0m"
-    puts "\n\e[41m                                   \e[0m"
+    efunc.footer
     print "\e[37mENTER NUMBER: "
     @m = gets.chomp
     puts "\e[0m"
@@ -28,15 +26,9 @@ class RubyMiner
     when "1"
       exercise
     when "2"
-      system "clear"
-      puts @header
-      puts "UNDER CONSTRUCTION"
-      #makfile
-      sleep(4)
-      main
+      makfile
     when "3"
-      system "clear"
-      puts @header
+      efunc.header
       puts "UNDER CONSTRUCTION"
       #koans
       sleep(4)
@@ -44,11 +36,10 @@ class RubyMiner
     when "4"
       about
     when "5"
-      system "clear"
-      puts @header
+      efunc.header
       puts "\e[37mThank you for trying Ruby Miner"
       puts "\n\n\e[37mAll rights reserved ©Ruby Miner 2016\nBy William Dunlop\e[0m"
-      puts "\e[41m                                   \e[0m"
+      efunc.footer
       sleep(4)
       system "clear"
       exit
@@ -56,34 +47,30 @@ class RubyMiner
   end
 
   def exercise       #Exercises menu
-    @header =  "\e[1;41;37m          RUBY MINER v1.0          \e[1;0;0m"
-    system "clear"
-    puts @header
+    efunc.header
     puts "      \e[37m     Exercises\e[0m"
-    exdir = '/home/will/CoderFactory/CFWork'
+    exdir = '/home/will/CoderFactory/LinuxCFWork'
     filelist =  Dir.foreach(exdir).select { |x| File.file?("#{exdir}/#{x}") }
       filelist.map.each_with_index do |fl,i|
         puts "\e[33m[#{i+1}]\e[31m\t#{fl}\e[0m"
       end
     @in = filelist.each_index
     @in
-    puts "\n\e[41m                                   \e[0m"
+    efunc.footer
     print "\e[37mENTER NUMBER: "
     @r = gets.chomp.to_i
     puts "\e[0m"
-    system "clear"
-    puts @header
+    efunc.header
     puts "\n\t\e[33m#{@r}. \e[31m#{filelist[@r-1]}\e[0m\n"
     puts "\n\e[37mWhat would you like to do with this file?\e[0m"
     puts "\e[33m[1]\e[0m \e[31mView Code \e[37m| \e[33m[2] \e[31mEdit Code\n\e[33m[3]\e[31m Run Code \e[37m | \e[33m[Any]\e[31m Return\e[37m"
-    puts "\n\e[41m                                   \e[0m"
+    efunc.footer
     print "\e[37mENTER NUMBER: "
     whatdo = gets.chomp
     puts "\e[0m"
     case whatdo
     when "1"            #view code
-      system "clear"
-      puts @header
+      efunc.header
       system "cat #{filelist[@r-1]}"
       puts "\n\e[37mPress any key to quit back to menu\e[0m"
       qui = gets.chomp
@@ -93,8 +80,7 @@ class RubyMiner
         exercise
       end
     when "2"          #Edit code
-      system "clear"
-      puts @header
+      efunc.header
       puts "Launching Atom\n..."
       system "sudo atom #{filelist[@r-1]}"
       sleep(1)
@@ -102,8 +88,7 @@ class RubyMiner
       sleep(2)
       exercise
     when "3"          #Run code
-      system "clear"
-      puts @header
+      efunc.header
       puts "Launching Application\n..."
       system "mate-terminal --window --title='Ruby-Miner v1.0 - #{filelist[@r-1]}' -e 'ruby #{filelist[@r-1]}'"
       sleep(1)
@@ -115,13 +100,51 @@ class RubyMiner
     end
   end
 
+  def makfile
+    efunc.header
+    puts "\t\e[37mFile Creator\n What is the name of your project?\e[0m"
+    efunc.footer
+    print "\e[37mPROJECT NAME: "
+    fil = gets.chomp
+    puts "\e[0m"
+    system "touch /home/will/CoderFactory/LinuxCFWork/#{fil}.rb"
+    efunc.header
+    puts "\e[37mFile \e[31m#{fil}.rb\e[37m has been created\e[0m"
+    sleep(1)
+    puts "\e[37mWould you like to set up it's classes and attributes?"
+    efunc.footer
+    until @z == 1 do
+      print "Y/N? "
+      cna = gets.chomp
+      puts"\e[0m"
+      if cna == "Y" || "y"
+        efunc.header
+        puts "UNDER CONSTRUCTION"
+        efunc.footer
+        sleep(2)
+        @z =1
+        main
+      elsif cna == "N" || "n"
+        efunc.header
+        puts "\n\e[37mFile is blank\e[0m"
+        efunc.footer
+        sleep(2)
+        @z = 1
+        main
+      else
+        efunc.header
+        puts "Incorrect input\nPlease try again"
+        efunc.footer
+      end
+    end
+  end
+
   def koans
 
   end
 
   def about
-    system "clear"
-    puts @header
+    efunc.header
     puts "\n\e[37mWelcome to Ruby Miner v1.0
           \nRuby Miner is a small terminal based
 program designed to organise and
@@ -135,10 +158,10 @@ to expand their programming career.
 
 For more information and other
 software that has been written by
-this demi-god of a man, please visit
+this scientist of a man, please visit
 \e[35mwww.github.com/willdunlop\e[37m and thank
 you for using Ruby Miner.\e[0m"
-    puts "\n\e[41m                                   \e[0m"
+  efunc.footer
     puts "\e[37mPress any key to return to the menu"
     @o = gets.chomp
     if @o = "q"
@@ -173,6 +196,15 @@ class ExtraFunc
     puts "The time is #{time.strftime("%I:%M%P")}  \e[0m"
   end
 
+  def header
+    @header =  "\e[1;41;37m          RUBY MINER v1.0          \e[1;0;0m"
+    system "clear"
+    puts @header
+  end
+
+  def footer
+    puts "\n\e[41m                                   \e[0m"
+  end
 end
 
 
