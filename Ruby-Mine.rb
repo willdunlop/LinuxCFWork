@@ -113,14 +113,12 @@ class RubyMiner
     sleep(1)
     puts "\e[37mWould you like to set up it's classes and attributes?"
     efunc.footer
-    print "Y/N? "
+    print "\e[37mY/N? "
     cna = gets.chomp
     puts"\e[0m"
-    if cna == "Y" || "y"
-
-      efunc.template
-
-    elsif cna == "N" || "n"
+    if cna == "y"
+      template
+    elsif cna == "n"
       efunc.header
       puts "\n\e[37mFile is blank\e[0m"
       efunc.footer
@@ -129,8 +127,65 @@ class RubyMiner
       main
     else
       efunc.header
-      puts "Incorrect input\nPlease try again"
+      puts "\e[37mIncorrect input\nPlease try again\e[0m"
       efunc.footer
+    end
+  end
+
+  def template
+    @cfile = File.open("/home/will/CoderFactory/LinuxCFWork/#{@@fil}.rb", 'a+')
+    efunc.header
+    puts "\e[37mWhat is the name of your class?"
+    efunc.footer
+    print "\e[37mCLASS NAME: "
+    @cla = gets.chomp
+    @cfile.write("\nclass #{@cla}")
+    efunc.header
+    puts "\e[37mdoes it have any attributes?"
+    efunc.footer
+    print "\e[37mY/N? "
+    @qa = gets.chomp
+    if @qa == "y"
+      efunc.header
+      puts "\e[37mHow many attributes?"
+      efunc.footer
+      print "\e[37mENTER NUMBER: "
+      @atcheck = 0
+      @atnum = gets.chomp.to_i
+      @attar = []
+      until @atcheck == @atnum do
+        efunc.header
+        puts "\e[37mWhat is attribute No. #{@atcheck + 1}?"
+        efunc.footer
+        print "\e[37mENTER ATTRIBUTE: "
+        @attch = gets.chomp
+        @attar << @attch
+        @atcheck = @atcheck + 1
+      end
+      @cfile.write("\n\tdef initialize(#{@attar})")
+      @attar.each do |atch|
+        @cfile.write("\n\t\t@#{atch} = #{atch}")
+      end
+      @cfile.write("\n\tend\nend")
+      @cfile.close
+      efunc.header
+      puts "\e[37mclass has been set up\e[0m"
+      efunc.footer
+      sleep(2)
+      puts "\e[37mReturning to main menu\e[0m"
+      sleep(1)
+      main
+    elsif @qa == "n"
+      efunc.header
+      @cfile.write("\n\tdef initialize()\n\n\tend\nend")
+      @cfile.close
+      puts "\e[37mClass has been setup\e[0m"
+      efunc.footer
+      sleep(2)
+      puts "\e[37mReturning to main menu\e[0m"
+      sleep(1)
+      main
+
     end
   end
 
@@ -159,7 +214,7 @@ you for using Ruby Miner.\e[0m"
   efunc.footer
     puts "\e[37mPress any key to return to the menu"
     @o = gets.chomp
-    if @o = "q"
+    if @o == "q"
       main
     else
       main
@@ -199,63 +254,6 @@ class ExtraFunc < RubyMiner
 
   def footer
     puts "\n\e[41m                                   \e[0m"
-  end
-
-  def template
-    @cfile = File.open("/home/will/CoderFactory/LinuxCFWork/#{@@fil}.rb", 'a+')
-    header
-    puts "\e[37mWhat is the name of your class?"
-    footer
-    print "CLASS NAME: "
-    @cla = gets.chomp
-    @cfile.write("\nclass #{@cla}")
-    header
-    puts "does it have any attributes?"
-    footer
-    print "Y/N? "
-    @qa = gets.chomp
-    if @qa = "Y" || "y"
-      header
-      puts "How many attributes?"
-      footer
-      print "ENTER NUMBER: "
-      @atcheck = 0
-      @atnum = gets.chomp.to_i
-      @attar = []
-      until @atcheck == @atnum do
-        header
-        puts "What is attribute No. #{@atcheck + 1}?"
-        footer
-        print "ENTER ATTRIBUTE: "
-        @attch = gets.chomp
-        @attar << @attch
-        @atcheck = @atcheck + 1
-      end
-      @cfile.write("\n\tdef initialize(#{@attar})")
-      @attar.each do |atch|
-        @cfile.write("\n\t\t@#{atch} = #{atch}")
-      end
-      @cfile.write("\n\tend\nend")
-      @cfile.close
-      header
-      puts "class has been set up\e[0m"
-      footer
-      sleep(2)
-      puts "\e[37mReturning to main menu\e[0m"
-      sleep(1)
-      launch.main
-    elsif @qa = "N" || "n"
-      header
-      puts "Class has been setup\e[0m"
-      footer
-      sleep(2)
-      puts "\e[37mReturning to main menu\e[0m"
-      sleep(1)
-      launch.main
-    
-    end
-
-
   end
 
 end
