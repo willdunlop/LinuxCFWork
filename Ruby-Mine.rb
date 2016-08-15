@@ -105,37 +105,32 @@ class RubyMiner
     puts "\t\e[37mFile Creator\n What is the name of your project?\e[0m"
     efunc.footer
     print "\e[37mPROJECT NAME: "
-    fil = gets.chomp
+    @@fil = gets.chomp
     puts "\e[0m"
-    system "touch /home/will/CoderFactory/LinuxCFWork/#{fil}.rb"
+    system "touch /home/will/CoderFactory/LinuxCFWork/#{@@fil}.rb"
     efunc.header
-    puts "\e[37mFile \e[31m#{fil}.rb\e[37m has been created\e[0m"
+    puts "\e[37mFile \e[31m#{@@fil}.rb\e[37m has been created\e[0m"
     sleep(1)
     puts "\e[37mWould you like to set up it's classes and attributes?"
     efunc.footer
-    until @z == 1 do
-      print "Y/N? "
-      cna = gets.chomp
-      puts"\e[0m"
-      if cna == "Y" || "y"
-        efunc.header
-        puts "UNDER CONSTRUCTION"
-        efunc.footer
-        sleep(2)
-        @z =1
-        main
-      elsif cna == "N" || "n"
-        efunc.header
-        puts "\n\e[37mFile is blank\e[0m"
-        efunc.footer
-        sleep(2)
-        @z = 1
-        main
-      else
-        efunc.header
-        puts "Incorrect input\nPlease try again"
-        efunc.footer
-      end
+    print "Y/N? "
+    cna = gets.chomp
+    puts"\e[0m"
+    if cna == "Y" || "y"
+
+      efunc.template
+
+    elsif cna == "N" || "n"
+      efunc.header
+      puts "\n\e[37mFile is blank\e[0m"
+      efunc.footer
+      sleep(2)
+      @z = 1
+      main
+    else
+      efunc.header
+      puts "Incorrect input\nPlease try again"
+      efunc.footer
     end
   end
 
@@ -175,7 +170,7 @@ end
 #################################
 #################################
 
-class ExtraFunc
+class ExtraFunc < RubyMiner
   def initialize()
   end
 
@@ -205,6 +200,64 @@ class ExtraFunc
   def footer
     puts "\n\e[41m                                   \e[0m"
   end
+
+  def template
+    @cfile = File.open("/home/will/CoderFactory/LinuxCFWork/#{@@fil}.rb", 'a+')
+    header
+    puts "\e[37mWhat is the name of your class?"
+    footer
+    print "CLASS NAME: "
+    @cla = gets.chomp
+    @cfile.write("\nclass #{@cla}")
+    header
+    puts "does it have any attributes?"
+    footer
+    print "Y/N? "
+    @qa = gets.chomp
+    if @qa = "Y" || "y"
+      header
+      puts "How many attributes?"
+      footer
+      print "ENTER NUMBER: "
+      @atcheck = 0
+      @atnum = gets.chomp.to_i
+      @attar = []
+      until @atcheck == @atnum do
+        header
+        puts "What is attribute No. #{@atcheck + 1}?"
+        footer
+        print "ENTER ATTRIBUTE: "
+        @attch = gets.chomp
+        @attar << @attch
+        @atcheck = @atcheck + 1
+      end
+      @cfile.write("\n\tdef initialize(#{@attar})")
+      @attar.each do |atch|
+        @cfile.write("\n\t\t@#{atch} = #{atch}")
+      end
+      @cfile.write("\n\tend\nend")
+      @cfile.close
+      header
+      puts "class has been set up\e[0m"
+      footer
+      sleep(2)
+      puts "\e[37mReturning to main menu\e[0m"
+      sleep(1)
+      launch.main
+    elsif @qa = "N" || "n"
+      header
+      puts "Class has been setup\e[0m"
+      footer
+      sleep(2)
+      puts "\e[37mReturning to main menu\e[0m"
+      sleep(1)
+      launch.main
+    
+    end
+
+
+  end
+
 end
 
 
