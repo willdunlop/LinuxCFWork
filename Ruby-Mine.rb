@@ -13,6 +13,10 @@ class RubyMiner
   end
   attr_accessor :efunc
 
+
+  def intro
+    puts ""
+  end
   def main          #Main menu
     efunc.header
     efunc.tcheck
@@ -29,8 +33,9 @@ class RubyMiner
       makfile
     when "3"
       efunc.header
-      puts "UNDER CONSTRUCTION"
+      puts "\n\t\e[1;47;31mUNDER CONSTRUCTION\e[1;0;0m"
       #koans
+      efunc.footer
       sleep(4)
       main
     when "4"
@@ -38,7 +43,7 @@ class RubyMiner
     when "5"
       efunc.header
       puts "\e[37mThank you for trying Ruby Miner"
-      puts "\n\n\e[37mAll rights reserved ©Ruby Miner 2016\nBy William Dunlop\e[0m"
+      puts "\n\n\e[37mAll rights reserved © Ruby Miner 2016\nBy William Dunlop\e[0m"
       efunc.footer
       sleep(4)
       system "clear"
@@ -102,7 +107,13 @@ class RubyMiner
 
   def makfile
     efunc.header
-    puts "\t\e[37mFile Creator\n What is the name of your project?\e[0m"
+    puts "\t\e[37mFile Creater"
+    puts "\nFile creater is a tool in Ruby Miner
+that allows you to create and set up '.rb'
+files in you 'Exercises' directory. It will
+ask you whether or not you want to set up your
+classes or attributes now or later."
+    puts "\n \e[31mWhat is the name of your project?\e[0m"
     efunc.footer
     print "\e[37mPROJECT NAME: "
     @@fil = gets.chomp
@@ -111,7 +122,7 @@ class RubyMiner
     efunc.header
     puts "\e[37mFile \e[31m#{@@fil}.rb\e[37m has been created\e[0m"
     sleep(1)
-    puts "\e[37mWould you like to set up it's classes and attributes?"
+    puts "\n\e[37mWould you like to set up it's classes \nand attributes?"
     efunc.footer
     print "\e[37mY/N? "
     cna = gets.chomp
@@ -135,19 +146,19 @@ class RubyMiner
   def template
     @cfile = File.open("/home/will/CoderFactory/LinuxCFWork/#{@@fil}.rb", 'a+')
     efunc.header
-    puts "\e[37mWhat is the name of your class?"
+    puts "\n\e[37mWhat is the name of your class?"
     efunc.footer
     print "\e[37mCLASS NAME: "
     @cla = gets.chomp
     @cfile.write("\nclass #{@cla}")
     efunc.header
-    puts "\e[37mdoes it have any attributes?"
+    puts "\n\e[37mDoes it have any attributes?"
     efunc.footer
     print "\e[37mY/N? "
     @qa = gets.chomp
     if @qa == "y"
       efunc.header
-      puts "\e[37mHow many attributes?"
+      puts "\n\e[37mHow many attributes?"
       efunc.footer
       print "\e[37mENTER NUMBER: "
       @atcheck = 0
@@ -155,7 +166,7 @@ class RubyMiner
       @attar = []
       until @atcheck == @atnum do
         efunc.header
-        puts "\e[37mWhat is attribute No. #{@atcheck + 1}?"
+        puts "\n\e[37mWhat is attribute No. #{@atcheck + 1}?"
         efunc.footer
         print "\e[37mENTER ATTRIBUTE: "
         @attch = gets.chomp
@@ -169,11 +180,11 @@ class RubyMiner
       @cfile.write("\n\tend\nend")
       @cfile.close
       efunc.header
-      puts "\e[37mclass has been set up\e[0m"
-      efunc.footer
+      puts "\n\e[37mclass has been set up\e[0m"
       sleep(2)
       puts "\e[37mReturning to main menu\e[0m"
       sleep(1)
+      efunc.footer
       main
     elsif @qa == "n"
       efunc.header
