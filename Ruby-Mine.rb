@@ -280,9 +280,8 @@ later."
     efunc.footer
     sleep(1)
     puts "\e[37mReturning to menu\e[0m"
-    sleep(1)
+    sleep(2)
     main
-
   end
 
   def koans
