@@ -34,6 +34,7 @@ class RubyMiner
 
 
   def main          #Main menu
+    @sep = "\e[90m-" * 25
     efunc.header
     efunc.tcheck
     puts "\n\e[36m                7I777II.
@@ -54,9 +55,13 @@ I7?               OOO              .?II
                   OZ$
                   OZZ
                   OZZ
-                   8 "
-    puts"\n\e[33m[1]\e[31m\tExercises\n\e[33m[2]\e[31m\tCreate File\n\e[33m[3]\e[31m\tKoans"
-    puts "\e[33m[4]\e[31m\tGit Push\n\e[33m[5]\e[31m\tAbout\n\e[33m[6]\e[31m\tExit\e[0m"
+                   8 \e[0m"
+    puts " "
+    puts @sep
+    puts "\e[33m[1]\e[31m\tExercises\n#{@sep}\n\e[33m[2]\e[31m\tCreate File\n#{@sep}\n\e[33m[3]\e[31m\tKoans"
+    puts @sep
+    puts "\e[33m[4]\e[31m\tGit Push\n#{@sep}\n\e[33m[5]\e[31m\tAbout\n#{@sep}\n\e[33m[6]\e[31m\tExit\e[0m"
+    puts @sep
     efunc.footer
     print "\e[37mENTER NUMBER: "
     @m = gets.chomp
@@ -253,19 +258,22 @@ later."
 
   def gitpush
     efunc.header
-    print "Enter a commit comment: "
+    print "\e[37mEnter a commit comment: "
     comit = gets.chomp
-    puts "..."
+    puts "\e[37m..."
     sleep(2)
     puts "\e[37mChanging directory"
     system "cd /home/will/CoderFactory/LinuxCFWork"
+    sleep(0.25)
     puts "Initializing git procedure"
     system "git init"
     puts "Adding directory, preparing for push"
+    sleep(0.5)
     system "git add ."
     puts "Setting up your commit"
     system "git commit -m \"#{comit}\""
     puts "Begining push"
+    sleep(0.5)
     system "git push -u origin master"
     sleep(1)
     puts "\e[37mGit push was successful"
