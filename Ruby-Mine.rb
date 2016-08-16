@@ -36,6 +36,25 @@ class RubyMiner
   def main          #Main menu
     efunc.header
     efunc.tcheck
+    puts "\n\e[36m                7I777II.
+     .. +IIIIIIIII777IIIIIIIII.
+    ?IIIIIIIIIIIII777IIIIIIIIIIIII:
+ ,IIIIIIII??      OOO     :?IIIIIIIII~
+I7?               OOO              .?II
+                  OOO
+                  OOO
+                  OOO
+                  OOO
+                  OOO
+                  OOO
+                  OOO
+                  OOO
+                  OZZ
+                  OZZ
+                  OZ$
+                  OZZ
+                  OZZ
+                   8 "
     puts"\n\e[33m[1]\e[31m\tExercises\n\e[33m[2]\e[31m\tCreate File\n\e[33m[3]\e[31m\tKoans"
     puts "\e[33m[4]\e[31m\tGit Push\n\e[33m[5]\e[31m\tAbout\n\e[33m[6]\e[31m\tExit\e[0m"
     efunc.footer
@@ -236,11 +255,9 @@ later."
     efunc.header
     print "Enter a commit comment: "
     comit = gets.chomp
-    #puts "Launching seperate terminal for git"
-    #system "mate-terminal --window --title='Ruby-Miner v1.0 - GitPusher' -e 'git init && git add . && git commit -m \"#{comit}\" && git push -u origin master'"
     puts "..."
     sleep(2)
-    puts "Changing directory"
+    puts "\e[37mChanging directory"
     system "cd /home/will/CoderFactory/LinuxCFWork"
     puts "Initializing git procedure"
     system "git init"
@@ -251,10 +268,10 @@ later."
     puts "Begining push"
     system "git push -u origin master"
     sleep(1)
-    puts "git push was successful"
+    puts "\e[37mGit push was successful"
     efunc.footer
     sleep(1)
-    puts "Returning to menu"
+    puts "\e[37mReturning to menu\e[0m"
     sleep(1)
     main
 
@@ -318,13 +335,13 @@ class ExtraFunc
   end
 
   def header
-    @header =  "\e[1;41;37m          RUBY MINER v1.0          \e[1;0;0m"
+    @header =  "\e[1;41;37m             RUBY MINER v1.0             \e[1;0;0m"
     system "clear"
     puts @header
   end
 
   def footer
-    puts "\n\e[41m                                   \e[0m"
+    puts "\n\e[41m                                         \e[0m"
   end
 
 end
