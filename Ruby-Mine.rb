@@ -236,10 +236,21 @@ later."
     efunc.header
     print "Enter a commit comment: "
     comit = gets.chomp
-    puts "Launching seperate terminal for git"
-    system "mate-terminal --window --title='Ruby-Miner v1.0 - GitPusher' -e 'cd /home/will/CoderFactory/LinuxCFWork && git init && git add . && git commit -m '#{comit}' && git push -u origin master'"
+    #puts "Launching seperate terminal for git"
+    #system "mate-terminal --window --title='Ruby-Miner v1.0 - GitPusher' -e 'git init && git add . && git commit -m \"#{comit}\" && git push -u origin master'"
     puts "..."
     sleep(2)
+    puts "Changing directory"
+    system "cd /home/will/CoderFactory/LinuxCFWork"
+    puts "Initializing git procedure"
+    system "git init"
+    puts "Adding directory, preparing for push"
+    system "git add ."
+    puts "Setting up your commit"
+    system "git commit -m \"#{comit}\""
+    puts "Begining push"
+    system "git push -u origin master"
+    sleep(1)
     puts "git push was successful"
     efunc.footer
     sleep(1)
