@@ -212,7 +212,7 @@ later."
     efunc.footer
     print "\e[37mY/N? "
     @qa = gets.chomp
-    if @qa == "y"
+    if @qa == "y" ####
       efunc.header
       puts "\n\e[37mHow many attributes?"
       efunc.footer
