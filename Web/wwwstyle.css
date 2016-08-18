@@ -1,6 +1,7 @@
 
 body {
-  background-color: #f4e3f1;
+  background-color: #f9d0f1;
+  /*background-image: url(http://i65.tinypic.com/34znmyx.png);*/
 
 }
 
@@ -24,6 +25,13 @@ h3 {
 
 }
 
+h4 {
+  letter-spacing: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #8cb3b8;
+}
+
 .clock {
   border-radius: 100%;
   background-color: white;
@@ -35,6 +43,7 @@ h3 {
   padding: 3%;
   position: relative;
   width: 20em;
+  z-index: -1
 }
 
 .clock.simple:after {
@@ -51,14 +60,14 @@ h3 {
 }
 
 /*.circle {
+  border-radius: 100%;
   background-color: black;
   height: 2em;
   width: 2em;
   float: left;
-  margin-top: 290px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+  margin: 170px 452px;
+  position: relative;;
+  z-index: 11;
 
 }*/
 
