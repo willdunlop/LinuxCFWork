@@ -1,0 +1,39 @@
+
+h1 {
+  text-align: center;
+}
+
+h4{
+  text-align: center;
+}
+
+.imagegood {
+  background-color: #fff
+}
+
+.image {
+     width: 144px;
+     height: 100px;
+     transition: width 2s height 2s;
+     transition-duration: 2s;
+     background-color: rgb(70, 70, 70);
+     text-align: center;
+     color: #fff;
+     background: url(http://i63.tinypic.com/wb2elz.jpg) no-repeat;
+     background-size: contain;
+     border-radius: 5%;
+     border-style: solid;
+     border-color: #000;
+
+
+}
+
+.image:hover {
+  width: 432px;
+  height: 300px;
+  background: url(http://i63.tinypic.com/wb2elz.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 5%
+
+
+}
