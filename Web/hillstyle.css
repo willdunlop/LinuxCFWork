@@ -5,15 +5,36 @@ h1 {
   letter-spacing: 25px;
 }
 
+h3 {
+  font-family: 'Droid Sans', sans-serif;
+  letter-spacing: 5px;
+  margin: 0
+
+}
+
 h4{
   margin-left: 200px;
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
 }
 
+/*.background {
+  background: url(http://i63.tinypic.com/23t04lz.png) no-repeat;
+  image-orientation: from-image;
+  background-position: top;
+  width: 1840px;
+  height: 1245px;
+  margin: 0 auto 0 auto;
+
+}*/
+
+
+
 body {
   background: url(http://i63.tinypic.com/23t04lz.png) no-repeat;
-
+  background-position: top;
+  background-attachment: fixed;
+  background-color: #f9c897;
 }
 
 .image {
@@ -27,16 +48,21 @@ body {
    transition: width 2s height 2s;
    transition-duration: 2s;
    background-color: rgb(70, 70, 70);
-   text-align: center;
-   font-family: 'Shadows Into Light', cursive;
-   color: #fff;
+
    background: url(http://i63.tinypic.com/wb2elz.jpg) no-repeat;
    background-size: contain;
-   border-radius: 5%;
+   /*border-radius: 5%;*/
    border-style: solid;
    border-color: #000;
    /*float: left;*/
+}
 
+.text1 {
+  background-color: rgba(225,225,225,0.5);
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 18px;
+  color: #000;
 
 }
 
@@ -45,7 +71,7 @@ body {
   height: 299px;
   background: url(http://i63.tinypic.com/wb2elz.jpg) no-repeat;
   background-size: contain;
-  border-radius: 5%;
+  /*border-radius: 5%;*/
   border-width: thick;
 
 }
@@ -66,7 +92,7 @@ body {
   color: #fff;
   background: url(http://i65.tinypic.com/sxorcy.jpg) no-repeat;
   background-size: contain;
-  border-radius: 5%;
+  /*border-radius: 5%;*/
   border-style: solid;
   border-color: #000
 
@@ -77,14 +103,14 @@ body {
   height: 299px;
   background: url(http://i65.tinypic.com/sxorcy.jpg) no-repeat;
   background-size: contain;
-  border-radius: 5%;
+  /*border-radius: 5%;*/
   border-width: thick;
 
 }
 
 
 .image3 {
-  width: 140px;
+  width: 141px;
   height: 98.5px;
   padding: 25px;
   margin: 0 auto 0 auto;
@@ -98,7 +124,7 @@ body {
   color: #fff;
   background: url(http://i67.tinypic.com/2yl4j9x.jpg) no-repeat;
   background-size: contain;
-  border-radius: 5%;
+  /*border-radius: 5%;*/
   border-style: solid;
   border-color: #000
 
@@ -109,7 +135,53 @@ body {
   height: 299px;
   background: url(http://i67.tinypic.com/2yl4j9x.jpg) no-repeat;
   background-size: contain;
-  border-radius: 5%;
+  /*border-radius: 5%;*/
   border-width: thick;
+
+}
+
+.about {
+  margin 0 auto 0 auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  padding: 20px;
+  background-color: rgba(225,225,225,0.5);
+  border-style: solid;
+  text-align: center;
+  text-decoration: #000;
+  font-family: 'Shadows Into Light';
+  font-size: 18px;
+  transition-duration: 1s;
+  /*padding-left: 25%;
+  padding-right: 25%;*/
+}
+
+.about:hover {
+  background-color: rgba(225,225,225,0.9);
+
+}
+
+.when {
+  margin 0 auto 0 auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  padding: 20px;
+  background-color: rgba(225,225,225,0.5);
+  border-style: solid;
+  text-align: center;
+  text-decoration: #000;
+  font-family: 'Shadows Into Light';
+  font-size: 18px;
+  transition-duration: 1s;
+  /*padding-left: 25%;
+  padding-right: 25%;*/
+}
+
+.when:hover {
+  background-color: rgba(225,225,225,0.9);
 
 }
