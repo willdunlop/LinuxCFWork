@@ -1,39 +1,115 @@
 
 h1 {
   text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  letter-spacing: 25px;
 }
 
 h4{
+  margin-left: 200px;
   text-align: center;
+  font-family: 'Shadows Into Light', cursive;
 }
 
-.imagegood {
-  background-color: #fff
+body {
+  background: url(http://i63.tinypic.com/23t04lz.png) no-repeat;
+
 }
 
 .image {
-     width: 144px;
-     height: 100px;
-     transition: width 2s height 2s;
-     transition-duration: 2s;
-     background-color: rgb(70, 70, 70);
-     text-align: center;
-     color: #fff;
-     background: url(http://i63.tinypic.com/wb2elz.jpg) no-repeat;
-     background-size: contain;
-     border-radius: 5%;
-     border-style: solid;
-     border-color: #000;
+   width: 141px;
+   height: 100px;
+   padding: 25px;
+   margin: 0 auto 0 auto;
+   /*margin-left: 25px;*/
+   margin-top: 25px;
+   margin-bottom: 25px;
+   transition: width 2s height 2s;
+   transition-duration: 2s;
+   background-color: rgb(70, 70, 70);
+   text-align: center;
+   font-family: 'Shadows Into Light', cursive;
+   color: #fff;
+   background: url(http://i63.tinypic.com/wb2elz.jpg) no-repeat;
+   background-size: contain;
+   border-radius: 5%;
+   border-style: solid;
+   border-color: #000;
+   /*float: left;*/
 
 
 }
 
 .image:hover {
-  width: 432px;
-  height: 300px;
+  width: 426px;
+  height: 299px;
   background: url(http://i63.tinypic.com/wb2elz.jpg) no-repeat;
   background-size: contain;
-  border-radius: 5%
+  border-radius: 5%;
+  border-width: thick;
 
+}
+
+
+.image2 {
+  width: 141.5px;
+  height: 100px;
+  padding: 25px;
+  margin: 0 auto 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  transition: width 2s height 2s;
+  transition-duration: 2s;
+  background-color: rgb(70, 70, 70);
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: #fff;
+  background: url(http://i65.tinypic.com/sxorcy.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 5%;
+  border-style: solid;
+  border-color: #000
+
+}
+
+.image2:hover {
+  width: 427px;
+  height: 299px;
+  background: url(http://i65.tinypic.com/sxorcy.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 5%;
+  border-width: thick;
+
+}
+
+
+.image3 {
+  width: 140px;
+  height: 98.5px;
+  padding: 25px;
+  margin: 0 auto 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  transition: width 2s height 2s;
+  transition-duration: 2s;
+  background-color: rgb(70, 70, 70);
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: #fff;
+  background: url(http://i67.tinypic.com/2yl4j9x.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 5%;
+  border-style: solid;
+  border-color: #000
+
+}
+
+.image3:hover {
+  width: 427px;
+  height: 299px;
+  background: url(http://i67.tinypic.com/2yl4j9x.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 5%;
+  border-width: thick;
 
 }
