@@ -1,0 +1,1 @@
+["clay", "cray", "day", "fray", "frais", "fray", "frey", "gai", "gay", "gaye", "gray", "graye", "grey", "guay", "haigh", "gay", "grey", "hay", "hey", "j", "jay", "lay", "they", "may", "nay", "neigh", "pay", "play", "pray", "prey", "ray", "say", "slay", "sleigh", "splay", "spray", "stay", "stray", "tre", "way", "weigh", "yay"]
