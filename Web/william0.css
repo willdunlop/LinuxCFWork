@@ -1,7 +1,10 @@
 .head{
-  margin-top: 0px;
+  /*margin-top: 0px;
+  margin-right: 0px;*/
+  /*width: 2080px;*/
   background: url(http://i64.tinypic.com/svoxuh.jpg) no-repeat;
   background-position: center;
+  /*position: fixed;*/
 }
 
 h1 {
@@ -31,6 +34,7 @@ body {
 
 .nav {
  margin: 0 auto 0 auto;
+ /*position: fixed;*/
  height: 100px;
  width: 1250px;
  border-bottom-style: solid;
@@ -143,6 +147,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 60px 60px 60px 60px;
+  z-index: -1;
 
 }
   .animimage{
@@ -167,6 +172,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 60px 60px 60px 60px;
+  z-index: -1;
 }
   .codeimage{
     width: 200px;
