@@ -1,0 +1,181 @@
+.head{
+  margin-top: 0px;
+  background: url(http://i64.tinypic.com/svoxuh.jpg) no-repeat;
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  letter-spacing: 25px;
+  padding-top: 1%;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  color: #fff;
+
+}
+
+h4{
+  margin-left: 200px;
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  color: #fff;
+  padding: 1px;
+  margin-top: 10px;
+
+}
+
+body {
+  background-color: #6a9053;
+}
+
+.nav {
+ margin: 0 auto 0 auto;
+ height: 100px;
+ width: 1250px;
+ border-bottom-style: solid;
+ border-bottom-width: thin;
+ border-bottom-color: #fff;
+ font-family: 'Ubuntu', sans-serif;
+ color: #fff;
+
+}
+
+.home{
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-style: solid;
+  border-width: thin;
+  transition-duration: 0.5s;
+  /*transition-timing-function: ease-in-out;*/
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+  .home:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+  }
+
+.work{
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-right: 50px;
+  border-style: solid;
+  border-width: thin;
+  transition-duration: 0.5s;
+  /*transition-timing-function: ease-in-out;*/
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+  .work:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+
+  }
+
+.about {
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-right: 50px;
+  border-style: solid;
+  border-width: thin;
+  transition-duration: 0.5s;
+  /*transition-timing-function: ease-in-out;*/
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+  .about:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+
+  }
+
+
+.contact {
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-right: 50px;
+  border-style: solid;
+  border-width: thin;
+  transition-duration: 0.5s;
+  /*transition-timing-function: ease-in-out;*/
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+  .contact:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+
+  }
+
+
+.links{
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-right: 50px;
+  border-style: solid;
+  border-width: thin;
+  transition-duration: 0.5s;
+  /*transition-timing-function: ease-in-out;*/
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+  .links:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+
+  }
+
+.anim{
+  padding: 2%;
+  height: 250px;
+  /*float: left;*/
+  /*border-style: solid;
+  border-color: #fff;*/
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 60px 60px 60px 60px;
+
+}
+  .animimage{
+    width: 400px;
+    height: 200px;
+    background: url(http://i66.tinypic.com/e0hms9.jpg) no-repeat;
+    background-size: contain;
+    word-wrap: break-word;
+    float: right;
+  }
+
+
+
+
+.code{
+  width: 400px;
+  height: 250px;
+  padding: 2%;
+  /*float: left;*/
+  border-style: solid;
+  border-color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 60px 60px 60px 60px;
+}
+  .codeimage{
+    width: 200px;
+    height: 200px;
+    background: url(http://i65.tinypic.com/2m77qlw.jpg) no-repeat;
+    background-size: contain;
+  }
+
+  .codeinfo{
+    text-align: right;
+
+  }
