@@ -1,15 +1,8 @@
-.head{
-  /*margin-top: 0px;
-  margin-right: 0px;*/
-  /*width: 2080px;*/
-  background: url(http://i64.tinypic.com/svoxuh.jpg) no-repeat;
-  background-position: center;
-  /*position: fixed;*/
-}
 
 h1 {
   text-align: center;
   font-family: 'Droid Sans', sans-serif;
+  background-color: rgba(0, 0, 0, 0.2);
   letter-spacing: 25px;
   padding-top: 1%;
   margin-bottom: 10px;
@@ -32,11 +25,19 @@ body {
   background-color: #6a9053;
 }
 
+.linkbar {
+  margin: 0 auto 0 auto;
+  width: 1250px;
+  height: 100px;
+}
+
 .nav {
+ background: url(http://i67.tinypic.com/2yl4j9x.jpg) no-repeat;
+ background-position: center;
  margin: 0 auto 0 auto;
  /*position: fixed;*/
- height: 100px;
- width: 1250px;
+ height: 200px;
+ width: 1600px;
  border-bottom-style: solid;
  border-bottom-width: thin;
  border-bottom-color: #fff;
@@ -44,6 +45,13 @@ body {
  color: #fff;
 
 }
+
+a { color:#fff; outline: 0;} /* Globally */
+
+a:visited { text-decoration: none; color:#fff; }
+a:focus { text-decoration: none; color:#fff;}
+a:hover { text-decoration: none; color:#17d000; }
+
 
 .home{
   float: left;
@@ -56,8 +64,9 @@ body {
   transition-duration: 0.5s;
   /*transition-timing-function: ease-in-out;*/
   background-color: rgba(0, 0, 0, 0.6);
-
 }
+
+
   .home:hover{
     background-color: rgba(0, 0, 0, 0.8);
     color: #17d000;
@@ -73,12 +82,10 @@ body {
   transition-duration: 0.5s;
   /*transition-timing-function: ease-in-out;*/
   background-color: rgba(0, 0, 0, 0.6);
-
 }
   .work:hover{
     background-color: rgba(0, 0, 0, 0.8);
     color: #17d000;
-
   }
 
 .about {
@@ -91,12 +98,10 @@ body {
   transition-duration: 0.5s;
   /*transition-timing-function: ease-in-out;*/
   background-color: rgba(0, 0, 0, 0.6);
-
 }
   .about:hover{
     background-color: rgba(0, 0, 0, 0.8);
     color: #17d000;
-
   }
 
 
@@ -110,12 +115,10 @@ body {
   transition-duration: 0.5s;
   /*transition-timing-function: ease-in-out;*/
   background-color: rgba(0, 0, 0, 0.6);
-
 }
   .contact:hover{
     background-color: rgba(0, 0, 0, 0.8);
     color: #17d000;
-
   }
 
 
@@ -129,60 +132,46 @@ body {
   transition-duration: 0.5s;
   /*transition-timing-function: ease-in-out;*/
   background-color: rgba(0, 0, 0, 0.6);
-
 }
 
   .links:hover{
     background-color: rgba(0, 0, 0, 0.8);
     color: #17d000;
-
   }
 
-/*.words{
-  padding: 2%;
-  height: 260px;
-  width: 680px;
-  float: right;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  margin: 40px 150px 40px 40px;
-  z-index: -1;
-
-}
 
 .foot{
-  margin: 425 auto 0 auto;
-  width: 1600px;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto 0 auto;
+  width: 600px;
+  height: 15px;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
   color: #fff;
   text-align: center;
-
-}*/
+  font-family: 'Ubuntu', sans-serif;
+}
 
 
   #slider {
      background: #000;
      border: 5px solid #eaeaea;
      box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-     height: 620px;
+     height: 600px;
      width: 1585px;
-     margin: 20px 40px 40px 155px;
-     float: left;
+     margin: 40 auto 20 auto;
      overflow: visible;
      position: relative;
    }
 
-   #mask {
-   overflow: hidden;
-   height: 620px;
-    }
+  #mask {
+     overflow: hidden;
+     height: 600px;
+   }
 
-    #slider ul {
+  #slider ul {
      margin: 0;
      padding: 0;
      position: relative;
-  }
+   }
 
   #slider li {
      width: 680px;  /* Width Image */
@@ -194,53 +183,24 @@ body {
 
   #slider li.firstanimation {
    animation: cycle 25s linear infinite;
-}
+  }
 
-#slider li.secondanimation {
-   animation: cycletwo 25s linear infinite;
-}
+  #slider li.secondanimation {
+     animation: cycletwo 25s linear infinite;
+  }
 
 @keyframes cycle {
   0% {top: -5px; opacity: 1;}
-  48% {top: -325px; opacity: 1;}
-  50% {top: -325px; opacity: 0;}
+  48% {top: -300px; opacity: 1;}
+  50% {top: -300px; opacity: 0;}
   98% {top: 0px; opacity: 0;}
   100% {top: -5px; opacity: 1;}
 }
 
 @keyframes cycletwo {
-  0% {top: 0px; opacity: 0;}
-  48% {top: 0px; opacity: 0;}
-  50% {top: -15px; opacity: 1;}
-  98% {top: -310px; opacity: 1;}
-  100% {top: -325px; opacity: 0;}
+  0% {top: -325px; opacity: 0;}
+  48% {top: -325px; opacity: 0;}
+  50% {top: -310px; opacity: 1;}
+  98% {top: -15px; opacity: 1;}
+  100% {top: 0px; opacity: 0;}
 }
-
-
-
-
-
-
-.code{
-  width: 400px;
-  height: 250px;
-  padding: 2%;
-  /*float: left;*/
-  border-style: solid;
-  border-color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  margin: 60px 60px 60px 60px;
-  z-index: -1;
-}
-  .codeimage{
-    width: 200px;
-    height: 200px;
-    background: url(http://i65.tinypic.com/2m77qlw.jpg) no-repeat;
-    background-size: contain;
-  }
-
-  .codeinfo{
-    text-align: right;
-
-  }
